@@ -68,9 +68,9 @@ $(document).ready(function () {
         // flespi token
         tableau.password = $("#input_token").val();
         // flespi device ID
-        tableau.connectionData = $("#input_device").val();
+        tableau.connectionData = parseInt($("#input_device").val());
         //number of messages to fetch
-        tableau.platformEdition = $("#input_messages").val(); 
+        tableau.platformEdition = parseInt($("#input_messages").val()) || 100; 
         tableau.submit();
     });
 });
