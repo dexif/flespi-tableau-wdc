@@ -33,7 +33,7 @@
     };
 
     myConnector.getData = function(table, doneCallback) {
-   		$.ajax("https://flespi.io/gw/devices/" + tableau.connectionData + "/messages?data=%7B%22count%22%3A" + tableau.platformEdition + "%2C%22method%22%3A%22average%22%2C%22reverse%22%3Atrue%7D", {
+   		$.ajax("https://flespi.io/gw/devices/" + tableau.connectionData + "/messages?data=%7B%22count%22%3A100%2C%22method%22%3A%22average%22%2C%22reverse%22%3Atrue%7D", {
     		success: function(resp) {
 		    	var feat = resp.result,
 		        	tableData = [];
