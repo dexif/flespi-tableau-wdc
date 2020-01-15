@@ -67,12 +67,8 @@ $(document).ready(function () {
     $("#submitButton").click(function () {
     	tableau.connectionName = "flespidata";
         // flespi token
-        tableau.password = $("#input_token").val();
-        // flespi device ID
-        tableau.deviceid = parseInt($("#input_device").val());
-        //number of messages to fetch
-        tableau.messagescount = $("#input_device").val() || 100; 
-        tableau.connectionData = JSON.stringify({messagescount: $("#input_device").val() || 100, deviceid: parseInt($("#input_device").val())})
+        tableau.password = $("#input_token").val(); 
+        tableau.connectionData = JSON.stringify({messagescount: $("#input_messages").val(), deviceid: parseInt($("#input_device").val())})
         tableau.submit();
     });
 });
